@@ -1,0 +1,15 @@
+<launch>
+  <!-- mmWave Input arguments -->
+  <arg name="user" default="panda" doc="Name of the user whose data is being collected"/>
+  <arg name="dataset_path" default="/home/kalvik/" doc="Location to save recorded data"/>
+  <arg name="rec_time" default="60" doc="Time in seconds for how long to record"/>
+
+  <param name="/ti_mmwave/user" value="$(arg user)"/>
+  <param name="/ti_mmwave/dataset_path" value="$(arg dataset_path)"/>
+  <param name="/ti_mmwave/rec_time" value="$(arg rec_time)"/>
+  <param name="/ti_mmwave/dca1000_config_file" value="$(find ti_mmwave_rospkg)/cfg/datacard_config.json"/>
+
+  <!-- mmWave_Data_Recorder node -->
+  <node pkg="ti_mmwave_rospkg" type="data_collection.py" name="data_recorder" output="screen" required="true"/>
+
+</launch>

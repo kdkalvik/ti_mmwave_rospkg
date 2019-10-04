@@ -218,6 +218,9 @@ add_executable(mmWaveQuickConfig src/mmWaveQuickConfig.cpp)
 target_link_libraries(mmWaveQuickConfig ${catkin_LIBRARIES} mmwave)
 add_dependencies(mmWaveQuickConfig ${catkin_EXPORTED_TARGETS} mmwave)
 
+add_executable(mmWaveDataRecorder src/mmWaveDataRecorder.cpp)
+target_link_libraries(mmWaveDataRecorder ${catkin_LIBRARIES} mmwave)
+add_dependencies(mmWaveDataRecorder ${catkin_EXPORTED_TARGETS} mmwave)
 #############
 ## Testing ##
 #############
