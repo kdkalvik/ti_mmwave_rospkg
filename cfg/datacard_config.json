@@ -22,7 +22,7 @@
       "fileBasePath": "/home/kalvik/catkin_ws/src/ti_mmwave_rospkg/",
       "filePrefix": "adc_data",
       "maxRecFileSize_MB": 1024,
-      "sequenceNumberEnable": 1,
+      "sequenceNumberEnable": 0,
       "captureStopMode": "infinite",
       "bytesToCapture": 4000,
       "durationToCapture_ms": 4000,
